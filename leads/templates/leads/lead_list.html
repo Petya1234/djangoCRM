@@ -1,13 +1,19 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %}
+
+{% block content %}
 <section class="text-gray-600 body-font">
   <div class="container px-5 py-24 mx-auto flex flex-wrap">
     <div class="mb-6 w-full py6 flex justify-between items-center border-b border-gray-200">
       <div>
         <h1 class="text-4xl text-gray-800">Leads</h1>
+        <a class="text-gray-500 hover:text-blue-500" href="{% url 'leads:category_list' %}">
+          View categories
+        </a>
       </div>
       {% if request.user.is_organisor %}
       <div>
-        <a class="text-gray-500 hover:text-blue-500" href="{% url 'leads:lead_create' %}">Create a new lead
+        <a class="text-gray-500 hover:text-blue-500" href="{% url 'leads:lead_create' %}">
+          Create a new lead
         </a>
       </div>
       {% endif %}

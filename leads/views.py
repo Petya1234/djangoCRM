@@ -6,7 +6,7 @@ from django.contrib.auth import logout
 from django.contrib.auth.mixins import LoginRequiredMixin
 from agents.mixins import OrganisorAndLoginRequiredMixin
 from .models import Lead, Agent, Category
-from .forms import LeadModelForm, CustomUserCreationForm, AssignAgentForm
+from .forms import LeadModelForm, CustomUserCreationForm, AssignAgentForm, LeadCategoryUpdateForm
 # Create your views here.
 
 class SignupView(generic.CreateView):
@@ -22,6 +22,7 @@ class LandingPageView(generic.TemplateView):
 class LeadListView(LoginRequiredMixin,generic.ListView):
     template_name = "leads/lead_list.html"
     context_object_name = "leads"
+    
     def get_queryset(self):
         user = self.request.user
         if user.is_organisor:
@@ -139,7 +140,6 @@ class CategoryListView(LoginRequiredMixin, generic.ListView):
         context.update({
             "unassigned_lead_count": queryset.filter(category__isnull = True).count()
         })
-        print(queryset.filter(category__isnull = True))
         return context
     
     def get_queryset(self):
@@ -150,6 +150,44 @@ class CategoryListView(LoginRequiredMixin, generic.ListView):
             queryset = Category.objects.filter(organisation = user.agent.organisation)
         return queryset
 
+class CategoryDetailView(LoginRequiredMixin, generic.DetailView):
+    template_name = "leads/category_detail.html"
+    context_object_name = "category"
+    
+    
+    def get_context_data(self, **kwargs):
+        context = super(CategoryDetailView, self).get_context_data(**kwargs)
+        leads = self.get_object().leads.all()
+        
+        context.update({
+            "leads": leads
+        })
+        return context
+    
+    def get_queryset(self):
+        user = self.request.user
+        if user.is_organisor:
+            queryset = Category.objects.filter(organisation = user.userprofile)
+        else:
+            queryset = Category.objects.filter(organisation = user.agent.organisation)
+        return queryset
+    
+class LeadCategoryUpdateVIew(LoginRequiredMixin, generic.UpdateView):
+    template_name = "leads/lead_category_update.html"
+    form_class = LeadCategoryUpdateForm
+    
+    def get_success_url(self):
+        return reverse("leads:lead_detail", kwargs={"pk": self.get_object().id})
+    
+    def get_queryset(self):
+        user = self.request.user
+        if user.is_organisor:
+            queryset = Lead.objects.filter(organisation = user.userprofile)
+        else:
+            queryset = Lead.objects.filter(organisation = user.agent.organisation)
+            queryset = queryset.filter(agent__user = user)
+        return queryset
+    
 def logout_view(request):
     logout(request)
     return redirect("leads:leads_list")
