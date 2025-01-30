@@ -20,10 +20,12 @@ from leads.views import LandingPageView, SignupView
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth.views import LoginView, PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
+from django.views.i18n import set_language
 from leads.views import logout_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+     path('i18n/', set_language, name='set_language'),
     path('leads/', include('leads.urls', namespace="leads")),
     path('agents/', include('agents.urls', namespace="agents")),
     path('', LandingPageView.as_view(), name = 'landing_page'),

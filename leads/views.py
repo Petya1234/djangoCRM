@@ -1,6 +1,7 @@
 from django.core.mail import send_mail
 from django.urls import reverse
 from django.views import generic
+from django.contrib import messages
 from django.shortcuts import redirect
 from django.contrib.auth import logout
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -62,15 +63,19 @@ class LeadCreateView(OrganisorAndLoginRequiredMixin, generic.CreateView):
     form_class = LeadModelForm
     
     def get_success_url(self):
-        return reverse("leads:leads_list")
+        return reverse("leads:lead_list")
     
     def form_valid(self, form):
+        lead = form.save(commit=False)
+        lead.organisation = self.request.user.userprofile
+        lead.save()
         send_mail(
-            subject="Lead was created",
-            message="Go to the site to check new lead",
+            subject="A lead has been created",
+            message="Go to the site to see the new lead",
             from_email="test@test.com",
             recipient_list=["test2@test.com"]
         )
+        messages.success(self.request, "You have successfully created a lead")
         return super(LeadCreateView, self).form_valid(form)
     
 class LeadUpdateView(OrganisorAndLoginRequiredMixin,generic.UpdateView):
@@ -78,7 +83,7 @@ class LeadUpdateView(OrganisorAndLoginRequiredMixin,generic.UpdateView):
     form_class = LeadModelForm
    
     def get_success_url(self):
-        return reverse("leads:leads_list")
+        return reverse("leads:lead_list")
     
     def get_queryset(self):
         user = self.request.user
@@ -93,7 +98,7 @@ class LeadDeleteView(OrganisorAndLoginRequiredMixin,generic.DeleteView):
     template_name = "leads/lead_delete.html"
     
     def get_success_url(self):
-        return reverse("leads:leads_list")
+        return reverse("leads:lead_list")
     
     def get_queryset(self):
         user = self.request.user
@@ -190,4 +195,4 @@ class LeadCategoryUpdateVIew(LoginRequiredMixin, generic.UpdateView):
     
 def logout_view(request):
     logout(request)
-    return redirect("leads:leads_list")
+    return redirect("leads:lead_list")
