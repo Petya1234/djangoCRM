@@ -25,10 +25,10 @@ from leads.views import logout_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-     path('i18n/', set_language, name='set_language'),
     path('leads/', include('leads.urls', namespace="leads")),
     path('agents/', include('agents.urls', namespace="agents")),
     path('', LandingPageView.as_view(), name = 'landing_page'),
+    path('en/', set_language, name='set_language'),
     path('login/', LoginView.as_view(), name = 'login'), 
     path('logout/', logout_view, name = 'logout'),
     path('signup/', SignupView.as_view(), name = 'signup'),
@@ -37,6 +37,3 @@ urlpatterns = [
     path('password_reset_confirm/<uidb64>/<token>/', PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
     path('password_reset_complete/', PasswordResetCompleteView.as_view(), name='password_reset_complete')
 ]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
