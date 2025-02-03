@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-01 21:55+0500\n"
+"POT-Creation-Date: 2025-02-03 14:25+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,6 +28,98 @@ msgstr "Англиский"
 msgid "Russian"
 msgstr "Русский"
 
+#: .\leads\templates\leads\assign_agent.html:6
+#: .\leads\templates\leads\lead_create.html:7
+#: .\leads\templates\leads\lead_delete.html:7
+msgid "Back"
+msgstr "Назад"
+
+#: .\leads\templates\leads\assign_agent.html:8
+msgid "Assign an agent to this lead"
+msgstr "Назначить агента данному лиду"
+
+#: .\leads\templates\leads\assign_agent.html:14
+#: .\leads\templates\leads\lead_create.html:15
+#: .\leads\templates\leads\lead_delete.html:13
+msgid "Submit"
+msgstr "Подтвердить"
+
+#: .\leads\templates\leads\category_detail.html:10
+msgid "This are the leads under this category"
+msgstr "Лиды, принадлежащие данной категории"
+
+#: .\leads\templates\leads\category_detail.html:16
+msgid "First name"
+msgstr "Имя"
+
+#: .\leads\templates\leads\category_detail.html:17
+msgid "Last name"
+msgstr "Фамилия"
+
+#: .\leads\templates\leads\category_list.html:7
+msgid "Categories"
+msgstr "Категории"
+
+#: .\leads\templates\leads\category_list.html:8
+msgid "This categories segment the leads"
+msgstr "Лиды поделены на данные категории"
+
+#: .\leads\templates\leads\category_list.html:14
+msgid "Name"
+msgstr "Название"
+
+#: .\leads\templates\leads\category_list.html:15
+msgid "Count"
+msgstr "Количество лидов с данной категорией"
+
+#: .\leads\templates\leads\category_list.html:20
+#: .\leads\templates\leads\lead_list.html:78
+msgid "Unassigned"
+msgstr "Неназначенные"
+
+#: .\leads\templates\leads\lead_category_update.html:10
+msgid "LEAD"
+msgstr "ЛИД"
+
+#: .\leads\templates\leads\lead_category_update.html:14
+#: .\leads\templates\leads\lead_detail.html:22
+msgid "Overview"
+msgstr "Обзор"
+
+#: .\leads\templates\leads\lead_category_update.html:17
+#: .\leads\templates\leads\lead_detail.html:25
+#: .\leads\templates\leads\lead_list.html:46
+msgid "Category"
+msgstr "Категория"
+
+#: .\leads\templates\leads\lead_category_update.html:20
+#: .\leads\templates\leads\lead_detail.html:28
+msgid "Update Details"
+msgstr "Обновить информацию"
+
+#: .\leads\templates\leads\lead_create.html:9
+#: .\leads\templates\leads\lead_list.html:17
+msgid "Create a new lead"
+msgstr "Создать нового лида"
+
+#: .\leads\templates\leads\lead_delete.html:9
+msgid "Are you sure you want to delete this lead"
+msgstr "Вы уверены, что хотите удалить лида?"
+
+#: .\leads\templates\leads\lead_detail.html:32
+#: .\leads\templates\leads\lead_list.html:37
+msgid "Age"
+msgstr "Возраст"
+
+#: .\leads\templates\leads\lead_detail.html:36
+#: .\leads\templates\leads\lead_list.html:40
+msgid "Email"
+msgstr "Электронная почта"
+
+#: .\leads\templates\leads\lead_detail.html:40
+msgid "Phone Number"
+msgstr "Номер телефона"
+
 #: .\leads\templates\leads\lead_list.html:9
 msgid "Leads"
 msgstr "Лиды"
@@ -35,6 +127,37 @@ msgstr "Лиды"
 #: .\leads\templates\leads\lead_list.html:11
 msgid "View categories"
 msgstr "Посмотреть категории"
+
+#: .\leads\templates\leads\lead_list.html:31
+msgid "First Name"
+msgstr "Имя"
+
+#: .\leads\templates\leads\lead_list.html:34
+msgid "Last Name"
+msgstr "Фамилия"
+
+#: .\leads\templates\leads\lead_list.html:43
+msgid "Cell Phone Number"
+msgstr "Номер телефона"
+
+#: .\leads\templates\leads\lead_list.html:49
+#: .\leads\templates\leads\lead_list.html:84
+msgid "Edit"
+msgstr "Редактировать"
+
+#: .\leads\templates\leads\lead_list.html:91
+msgid "There are currently no leads"
+msgstr "Тут пока нет лидов"
+
+#: .\leads\templates\leads\lead_list.html:104
+#, fuzzy
+#| msgid "Unassigned"
+msgid "Unassigned leads"
+msgstr "Неназначенные"
+
+#: .\leads\templates\leads\lead_list.html:122
+msgid "Assign an agent"
+msgstr "Назначить агента"
 
 #: .\templates\landing.html:10
 msgid "CRM built with Django"

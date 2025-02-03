@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-01 21:55+0500\n"
+"POT-Creation-Date: 2025-02-03 14:25+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,12 +26,133 @@ msgstr ""
 msgid "Russian"
 msgstr ""
 
+#: .\leads\templates\leads\assign_agent.html:6
+#: .\leads\templates\leads\lead_create.html:7
+#: .\leads\templates\leads\lead_delete.html:7
+msgid "Back"
+msgstr ""
+
+#: .\leads\templates\leads\assign_agent.html:8
+msgid "Assign an agent to this lead"
+msgstr ""
+
+#: .\leads\templates\leads\assign_agent.html:14
+#: .\leads\templates\leads\lead_create.html:15
+#: .\leads\templates\leads\lead_delete.html:13
+msgid "Submit"
+msgstr ""
+
+#: .\leads\templates\leads\category_detail.html:10
+msgid "This are the leads under this category"
+msgstr ""
+
+#: .\leads\templates\leads\category_detail.html:16
+msgid "First name"
+msgstr ""
+
+#: .\leads\templates\leads\category_detail.html:17
+msgid "Last name"
+msgstr ""
+
+#: .\leads\templates\leads\category_list.html:7
+msgid "Categories"
+msgstr ""
+
+#: .\leads\templates\leads\category_list.html:8
+msgid "This categories segment the leads"
+msgstr ""
+
+#: .\leads\templates\leads\category_list.html:14
+msgid "Name"
+msgstr ""
+
+#: .\leads\templates\leads\category_list.html:15
+msgid "Count"
+msgstr ""
+
+#: .\leads\templates\leads\category_list.html:20
+#: .\leads\templates\leads\lead_list.html:78
+msgid "Unassigned"
+msgstr ""
+
+#: .\leads\templates\leads\lead_category_update.html:10
+msgid "LEAD"
+msgstr ""
+
+#: .\leads\templates\leads\lead_category_update.html:14
+#: .\leads\templates\leads\lead_detail.html:22
+msgid "Overview"
+msgstr ""
+
+#: .\leads\templates\leads\lead_category_update.html:17
+#: .\leads\templates\leads\lead_detail.html:25
+#: .\leads\templates\leads\lead_list.html:46
+msgid "Category"
+msgstr ""
+
+#: .\leads\templates\leads\lead_category_update.html:20
+#: .\leads\templates\leads\lead_detail.html:28
+msgid "Update Details"
+msgstr ""
+
+#: .\leads\templates\leads\lead_create.html:9
+#: .\leads\templates\leads\lead_list.html:17
+msgid "Create a new lead"
+msgstr ""
+
+#: .\leads\templates\leads\lead_delete.html:9
+msgid "Are you sure you want to delete this lead"
+msgstr ""
+
+#: .\leads\templates\leads\lead_detail.html:32
+#: .\leads\templates\leads\lead_list.html:37
+msgid "Age"
+msgstr ""
+
+#: .\leads\templates\leads\lead_detail.html:36
+#: .\leads\templates\leads\lead_list.html:40
+msgid "Email"
+msgstr ""
+
+#: .\leads\templates\leads\lead_detail.html:40
+msgid "Phone Number"
+msgstr ""
+
 #: .\leads\templates\leads\lead_list.html:9
 msgid "Leads"
 msgstr ""
 
 #: .\leads\templates\leads\lead_list.html:11
 msgid "View categories"
+msgstr ""
+
+#: .\leads\templates\leads\lead_list.html:31
+msgid "First Name"
+msgstr ""
+
+#: .\leads\templates\leads\lead_list.html:34
+msgid "Last Name"
+msgstr ""
+
+#: .\leads\templates\leads\lead_list.html:43
+msgid "Cell Phone Number"
+msgstr ""
+
+#: .\leads\templates\leads\lead_list.html:49
+#: .\leads\templates\leads\lead_list.html:84
+msgid "Edit"
+msgstr ""
+
+#: .\leads\templates\leads\lead_list.html:91
+msgid "There are currently no leads"
+msgstr ""
+
+#: .\leads\templates\leads\lead_list.html:104
+msgid "Unassigned leads"
+msgstr ""
+
+#: .\leads\templates\leads\lead_list.html:122
+msgid "Assign an agent"
 msgstr ""
 
 #: .\templates\landing.html:10
