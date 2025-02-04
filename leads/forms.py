@@ -1,5 +1,5 @@
 from django import forms
-from django.core.exceptions import ValidationError
+from django.utils.translation import gettext_lazy as _
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm, UsernameField
 from .models import Lead, Agent, Category
@@ -18,6 +18,15 @@ class LeadModelForm(forms.ModelForm):
             'phone_number',
             'email',
         )
+        labels ={
+            'first_name': _('First name'), 
+            'last_name' : _('Last name'),
+            'age' : _('Age'),
+            'agent' : _('Agent'),
+            'description' : _('Descripton'),
+            'phone_number' : _('Phone number'),
+            'email' : _('Email')
+        }
 
     def clean_first_name(self):
         data = self.cleaned_data["first_name"]
@@ -29,6 +38,9 @@ class CustomUserCreationForm(UserCreationForm):
         model = User
         fields = ("username",)
         field_classes = {'username': UsernameField}
+        label = {
+            'username' : _('Username')
+        }
 
 
 class AssignAgentForm(forms.Form):
@@ -47,6 +59,9 @@ class LeadCategoryUpdateForm(forms.ModelForm):
         fields = (
             'category',
         )
+        labels = {
+            'category' : _('Category')
+        }
 
 
 class CategoryModelForm(forms.ModelForm):
@@ -55,3 +70,6 @@ class CategoryModelForm(forms.ModelForm):
         fields = (
             'name',
         )
+        labels = {
+            'name' : _('Name')
+        }

@@ -1,7 +1,6 @@
 from django import forms
 from django.contrib.auth import get_user_model
-from django.contrib.auth.forms import UserCreationForm
-
+from django.utils.translation import gettext_lazy as _
 User = get_user_model()
 
 class AgentModelForm(forms.ModelForm):
@@ -13,3 +12,9 @@ class AgentModelForm(forms.ModelForm):
             'first_name',
             'last_name' 
         )
+        labels = {
+            'email' : _('Email'),
+            'username' : _('Username'),
+            'first_name' : _('First name'),
+            'last_name' : _('Last name')
+        }

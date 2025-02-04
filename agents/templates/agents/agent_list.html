@@ -1,14 +1,14 @@
 {% extends "base.html" %}
-
+{% load i18n %}
 {% block content %}
     <section class="text-gray-700 body-font">
         <div class="container px-5 py-24 mx-auto flex flex-wrap">
             <div class="w-full mb-6 py-6 flex justify-between items-center border-b border-gray-200">
                 <div>
-                    <h1 class="text-4xl text-gray-800">Agents</h1>
+                    <h1 class="text-4xl text-gray-800">{% trans "Agents" %}</h1>
                 </div>
                 <div>
-                    <a class="text-gray-500 hover:text-blue-500" href="{% url 'agents:agent_create' %}">Create a new agent</a>
+                    <a class="text-gray-500 hover:text-blue-500" href="{% url 'agents:agent_create' %}">{% trans "Create a new agent" %}</a>
                 </div>
             </div>
 
@@ -20,13 +20,13 @@
                         <thead class="bg-gray-50">
                             <tr>
                                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Full Name
+                                {% trans "Full name" %}
                                 </th>
                                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Email
+                                {% trans "Email" %}
                                 </th>
                                 <th scope="col" class="relative px-6 py-3">
-                                <span class="sr-only">Edit</span>
+                                <span class="sr-only">{% trans "Edit" %}</span>
                                 </th>
                             </tr>
                         </thead>
@@ -41,13 +41,13 @@
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                         <a href="{% url 'agents:agent_update' agent.pk %}" class="text-indigo-600 hover:text-indigo-900">
-                                            Edit
+                                            {% trans "Edit" %}
                                         </a>
                                     </td>
                                 </tr>
                             {% empty %}
 
-                            <p>There are currently no agents</p>
+                            <p>{% trans "There are currently no agents" %}</p>
 
                             {% endfor %}
                         </tbody>
@@ -56,7 +56,6 @@
                 </div>
                 </div>
             </div>
-
         </div>
       </section>
 {% endblock content %}

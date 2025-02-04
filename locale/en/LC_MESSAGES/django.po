@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-04 14:32+0500\n"
+"POT-Creation-Date: 2025-02-04 16:56+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +18,92 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: .\agents\forms.py:16 .\agents\templates\agents\agent_list.html:26
+#: .\leads\forms.py:28 .\leads\templates\leads\lead_detail.html:36
+#: .\leads\templates\leads\lead_list.html:40
+msgid "Email"
+msgstr ""
+
+#: .\agents\forms.py:17 .\leads\forms.py:42
+msgid "Username"
+msgstr ""
+
+#: .\agents\forms.py:18 .\leads\forms.py:22
+#: .\leads\templates\leads\category_detail.html:17
+msgid "First name"
+msgstr ""
+
+#: .\agents\forms.py:19 .\leads\forms.py:23
+#: .\leads\templates\leads\category_detail.html:18
+msgid "Last name"
+msgstr ""
+
+#: .\agents\templates\agents\agent_create.html:9
+#: .\leads\templates\leads\assign_agent.html:6
+#: .\leads\templates\leads\lead_create.html:7
+#: .\leads\templates\leads\lead_delete.html:7
+msgid "Back"
+msgstr ""
+
+#: .\agents\templates\agents\agent_create.html:12
+#: .\agents\templates\agents\agent_list.html:11
+msgid "Create a new agent"
+msgstr ""
+
+#: .\agents\templates\agents\agent_create.html:16
+#: .\agents\templates\agents\agent_delete.html:13
+#: .\agents\templates\agents\agent_update.html:23
+#: .\leads\templates\leads\assign_agent.html:14
+#: .\leads\templates\leads\lead_create.html:15
+#: .\leads\templates\leads\lead_delete.html:13
+msgid "Submit"
+msgstr ""
+
+#: .\agents\templates\agents\agent_delete.html:16
+msgid "Cancel"
+msgstr ""
+
+#: .\agents\templates\agents\agent_detail.html:9
+#: .\agents\templates\agents\agent_update.html:10
+msgid "AGENT"
+msgstr ""
+
+#: .\agents\templates\agents\agent_detail.html:13
+#: .\agents\templates\agents\agent_update.html:14
+#: .\leads\templates\leads\lead_category_update.html:14
+#: .\leads\templates\leads\lead_detail.html:22
+msgid "Overview"
+msgstr ""
+
+#: .\agents\templates\agents\agent_detail.html:16
+#: .\agents\templates\agents\agent_update.html:17
+msgid "Update details"
+msgstr ""
+
+#: .\agents\templates\agents\agent_detail.html:20
+#: .\agents\templates\agents\agent_list.html:23
+msgid "Full name"
+msgstr ""
+
+#: .\agents\templates\agents\agent_list.html:8
+msgid "Agents"
+msgstr ""
+
+#: .\agents\templates\agents\agent_list.html:29
+#: .\agents\templates\agents\agent_list.html:44
+#: .\leads\templates\leads\lead_list.html:49
+#: .\leads\templates\leads\lead_list.html:84
+msgid "Edit"
+msgstr ""
+
+#: .\agents\templates\agents\agent_list.html:50
+msgid "There are currently no agents"
+msgstr ""
+
+#: .\agents\templates\agents\agent_update.html:27
+msgid "Delete"
+msgstr ""
+
 #: .\djcrm\settings.py:119
 msgid "English"
 msgstr ""
@@ -26,32 +112,45 @@ msgstr ""
 msgid "Russian"
 msgstr ""
 
-#: .\leads\templates\leads\assign_agent.html:6
-#: .\leads\templates\leads\lead_create.html:7
-#: .\leads\templates\leads\lead_delete.html:7
-msgid "Back"
+#: .\leads\forms.py:24 .\leads\templates\leads\lead_detail.html:32
+#: .\leads\templates\leads\lead_list.html:37
+msgid "Age"
+msgstr ""
+
+#: .\leads\forms.py:25
+msgid "Agent"
+msgstr ""
+
+#: .\leads\forms.py:26
+msgid "Descripton"
+msgstr ""
+
+#: .\leads\forms.py:27
+msgid "Phone number"
+msgstr ""
+
+#: .\leads\forms.py:63 .\leads\templates\leads\lead_category_update.html:17
+#: .\leads\templates\leads\lead_detail.html:25
+#: .\leads\templates\leads\lead_list.html:46
+msgid "Category"
+msgstr ""
+
+#: .\leads\forms.py:74 .\leads\templates\leads\category_list.html:15
+msgid "Name"
 msgstr ""
 
 #: .\leads\templates\leads\assign_agent.html:8
 msgid "Assign an agent to this lead"
 msgstr ""
 
-#: .\leads\templates\leads\assign_agent.html:14
-#: .\leads\templates\leads\lead_create.html:15
-#: .\leads\templates\leads\lead_delete.html:13
-msgid "Submit"
+#: .\leads\templates\leads\category_detail.html:9
+#: .\leads\templates\leads\category_list.html:26
+#, python-format
+msgid "%(category)s"
 msgstr ""
 
-#: .\leads\templates\leads\category_detail.html:10
+#: .\leads\templates\leads\category_detail.html:11
 msgid "This are the leads under this category"
-msgstr ""
-
-#: .\leads\templates\leads\category_detail.html:16
-msgid "First name"
-msgstr ""
-
-#: .\leads\templates\leads\category_detail.html:17
-msgid "Last name"
 msgstr ""
 
 #: .\leads\templates\leads\category_list.html:8
@@ -60,10 +159,6 @@ msgstr ""
 
 #: .\leads\templates\leads\category_list.html:9
 msgid "This categories segment the leads"
-msgstr ""
-
-#: .\leads\templates\leads\category_list.html:15
-msgid "Name"
 msgstr ""
 
 #: .\leads\templates\leads\category_list.html:16
@@ -75,24 +170,8 @@ msgstr ""
 msgid "Unassigned"
 msgstr ""
 
-#: .\leads\templates\leads\category_list.html:26
-#, python-format
-msgid "%(category)s"
-msgstr ""
-
 #: .\leads\templates\leads\lead_category_update.html:10
 msgid "LEAD"
-msgstr ""
-
-#: .\leads\templates\leads\lead_category_update.html:14
-#: .\leads\templates\leads\lead_detail.html:22
-msgid "Overview"
-msgstr ""
-
-#: .\leads\templates\leads\lead_category_update.html:17
-#: .\leads\templates\leads\lead_detail.html:25
-#: .\leads\templates\leads\lead_list.html:46
-msgid "Category"
 msgstr ""
 
 #: .\leads\templates\leads\lead_category_update.html:20
@@ -107,16 +186,6 @@ msgstr ""
 
 #: .\leads\templates\leads\lead_delete.html:9
 msgid "Are you sure you want to delete this lead"
-msgstr ""
-
-#: .\leads\templates\leads\lead_detail.html:32
-#: .\leads\templates\leads\lead_list.html:37
-msgid "Age"
-msgstr ""
-
-#: .\leads\templates\leads\lead_detail.html:36
-#: .\leads\templates\leads\lead_list.html:40
-msgid "Email"
 msgstr ""
 
 #: .\leads\templates\leads\lead_detail.html:40
@@ -140,12 +209,7 @@ msgid "Last Name"
 msgstr ""
 
 #: .\leads\templates\leads\lead_list.html:43
-msgid "Cell Phone Number"
-msgstr ""
-
-#: .\leads\templates\leads\lead_list.html:49
-#: .\leads\templates\leads\lead_list.html:84
-msgid "Edit"
+msgid "Cell number"
 msgstr ""
 
 #: .\leads\templates\leads\lead_list.html:91
