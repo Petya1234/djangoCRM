@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-03 14:25+0500\n"
+"POT-Creation-Date: 2025-02-04 14:32+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,25 +54,30 @@ msgstr ""
 msgid "Last name"
 msgstr ""
 
-#: .\leads\templates\leads\category_list.html:7
+#: .\leads\templates\leads\category_list.html:8
 msgid "Categories"
 msgstr ""
 
-#: .\leads\templates\leads\category_list.html:8
+#: .\leads\templates\leads\category_list.html:9
 msgid "This categories segment the leads"
 msgstr ""
 
-#: .\leads\templates\leads\category_list.html:14
+#: .\leads\templates\leads\category_list.html:15
 msgid "Name"
 msgstr ""
 
-#: .\leads\templates\leads\category_list.html:15
+#: .\leads\templates\leads\category_list.html:16
 msgid "Count"
 msgstr ""
 
-#: .\leads\templates\leads\category_list.html:20
+#: .\leads\templates\leads\category_list.html:21
 #: .\leads\templates\leads\lead_list.html:78
 msgid "Unassigned"
+msgstr ""
+
+#: .\leads\templates\leads\category_list.html:26
+#, python-format
+msgid "%(category)s"
 msgstr ""
 
 #: .\leads\templates\leads\lead_category_update.html:10

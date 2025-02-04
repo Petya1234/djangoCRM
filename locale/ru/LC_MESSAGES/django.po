@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-03 14:25+0500\n"
+"POT-Creation-Date: 2025-02-04 13:59+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -76,6 +76,16 @@ msgstr "Количество лидов с данной категорией"
 #: .\leads\templates\leads\lead_list.html:78
 msgid "Unassigned"
 msgstr "Неназначенные"
+
+#: .\leads\templates\leads\category_list.html:25
+msgid "Contacted"
+msgstr "Был контакт"
+
+msgid "Converted"
+msgstr "Переведены"
+
+msgid "Unconverted"
+msgstr "Не переведены"
 
 #: .\leads\templates\leads\lead_category_update.html:10
 msgid "LEAD"

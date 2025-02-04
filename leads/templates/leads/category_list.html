@@ -1,5 +1,6 @@
 {% extends "base.html" %} 
 {% load i18n %}
+{% load filters %}
 {% block content %}
 <section class="text-gray-600 body-font">
     <div class="container px-5 py-24 mx-auto">
@@ -22,7 +23,7 @@
               </tr>
             {% for category in category_list %}
             <tr> 
-              <td class="px-4 py-3"> <a href="{% url 'leads:category_detail' category.pk %}">{{category.name}}</a></td>
+              <td class="px-4 py-3"> <a href="{% url 'leads:category_detail' category.pk %}"> {% blocktrans with category.name|template_trans as category %}{{ category }}{% endblocktrans %}</a></td>
               <td class="px-4 py-3">TODO count</td>
             </tr>
             {% endfor %}
