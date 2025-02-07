@@ -23,8 +23,8 @@
               </tr>
             {% for category in category_list %}
             <tr> 
-              <td class="px-4 py-3"> <a href="{% url 'leads:category_detail' category.pk %}"> {% blocktrans with category.name|template_trans as category %}{{ category }}{% endblocktrans %}</a></td>
-              <td class="px-4 py-3">TODO count</td>
+              <td class="px-4 py-3"> <a href="{% url 'leads:category_detail' category.id %}"> {% blocktrans with category.name|template_trans as category %}{{ category }}{% endblocktrans %}</a></td>
+              <td class="px-4 py-3">{{ category.leads_count }}</td>
             </tr>
             {% endfor %}
           </tbody>

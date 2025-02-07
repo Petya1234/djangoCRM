@@ -32,14 +32,13 @@ class Lead(models.Model):
 class Agent(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     organisation = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
-    
     def __str__(self):
         return self.user.email
     
 class Category(models.Model):
     name = models.CharField(max_length=30)
     organisation = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
-    
+    leads_count = models.IntegerField(default=0)
     def __str__(self):
         return self.name
 

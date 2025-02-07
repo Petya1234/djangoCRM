@@ -121,7 +121,7 @@ class AssignAgentView(OrganisorAndLoginRequiredMixin, generic.FormView):
         return kwargs
         
     def get_success_url(self):
-        return reverse("leads:leads_list")
+        return reverse("leads:lead_list")
     
     def form_valid(self, form):
         agent = form.cleaned_data["agent"]
@@ -132,7 +132,6 @@ class AssignAgentView(OrganisorAndLoginRequiredMixin, generic.FormView):
 
 class CategoryListView(LoginRequiredMixin, generic.ListView):
     template_name = "leads/category_list.html"
-    context_object_name = "category_list"
     
     def get_context_data(self, **kwargs):
         context = super(CategoryListView, self).get_context_data(**kwargs)
@@ -142,9 +141,21 @@ class CategoryListView(LoginRequiredMixin, generic.ListView):
         else:
             queryset = Lead.objects.filter(organisation = user.agent.organisation)
             
+        category_list = context['object_list'].values()
+        list_of_categories = []
+        for cate_number in category_list:
+        # Update The number field in each category by counting all the leads that connected to this category
+            cate_number['number'] = queryset.filter(
+                category=cate_number['id']).count()
+            x = {'id': cate_number['id'], 'name': cate_number['name'],
+                    'leads_count': cate_number['number']}
+            list_of_categories.append(x)
+            
         context.update({
-            "unassigned_lead_count": queryset.filter(category__isnull = True).count()
+            "unassigned_lead_count": queryset.filter(category__isnull = True).count(),
+            "category_list": list_of_categories
         })
+        
         return context
     
     def get_queryset(self):
@@ -177,7 +188,7 @@ class CategoryDetailView(LoginRequiredMixin, generic.DetailView):
             queryset = Category.objects.filter(organisation = user.agent.organisation)
         return queryset
     
-class LeadCategoryUpdateVIew(LoginRequiredMixin, generic.UpdateView):
+class LeadCategoryUpdateView(LoginRequiredMixin, generic.UpdateView):
     template_name = "leads/lead_category_update.html"
     form_class = LeadCategoryUpdateForm
     
